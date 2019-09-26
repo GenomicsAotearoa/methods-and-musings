@@ -2,6 +2,8 @@
 
 A (growing) collection of information contributed by Genomics Aotearoa members.
 
+----
+
 ### Nanopore (re)-base-calling
 
 Dr Ann McCartney, a Genomics Aotearoa funded researcher at Manaaki Whenua Landcare Research, has contributed some information based on her experiences on working with Oxford Nanopore sequencing data:
@@ -13,3 +15,4 @@ Manaaki Whenua / Landcare Research <BR>
 Genomics Aotearoa<BR>
 26/09/2019
 
+----
