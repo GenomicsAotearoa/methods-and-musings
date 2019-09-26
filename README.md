@@ -6,7 +6,7 @@ A (growing) collection of information contributed by Genomics Aotearoa members.
 
 Dr Ann McCartney, a Genomics Aotearoa funded researcher at Manaaki Whenua Landcare Research, has contributed some information based on her experiences on working with Oxford Nanopore sequencing data:
 
-![Re-base-calling my Oxford Nanopore data?](nanopore-basecalling.md)
+![Re-base-calling my Oxford Nanopore data?](nanopore-basecalling/nanopore-basecalling.md)
 
 **Dr Ann McCartney**<BR>
 Manaaki Whenua / Landcare Research <BR>
