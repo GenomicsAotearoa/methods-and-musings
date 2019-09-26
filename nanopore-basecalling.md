@@ -146,8 +146,8 @@ Flip-Flop**
 **Figure 1:** Images of the mean quality score of base-calls over the
 course of the Rewarewa sequencing run both with (left) and without
 (right) the implementation of the Guppy flip-flop algorithm.
-![C:\\Users\\mccartneya\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\rewarewa\_qscoreperhour.png](media/image1.png){width="6.268055555555556in"
-height="3.134027777777778in"}
+
+![](Images/guppy_results.png)
 
 In my opinion I recommend re-base-calling of data with guppy flip-flop.
 However, before doing so, I think it is important to consider the
