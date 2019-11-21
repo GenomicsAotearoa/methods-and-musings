@@ -7,4 +7,6 @@
 # More Information
 [How to ask a good question](https://stackoverflow.com/help/how-to-ask)
 
+[Guide to using GitHub](https://guides.github.com/activities/hello-world/)
+
 [Learn about Gists](https://help.github.com/en/github/writing-on-github/creating-gists)
