@@ -5,5 +5,6 @@
 * Share Gist URL and data URL
 
 # More Information
-[Learn about Gists](https://help.github.com/en/github/writing-on-github/creating-gists)
 [How to ask a good question](https://stackoverflow.com/help/how-to-ask)
+
+[Learn about Gists](https://help.github.com/en/github/writing-on-github/creating-gists)
