@@ -299,7 +299,7 @@ ax.set_xticklabels(['', 'AffProp (0.5)', 'AffProp (0.85)', 'Birch', 'DBSCAN'])
 plt.savefig('figs/fig_fulldata.png', bbox_inches='tight')
 ```
 
-![Bin cluster proportion across multiple bins](https://github.com/GenomicsAotearoa/methods-and-musings/bin-cluster-refinement/figs/fig_fulldata.png)
+![Bin cluster proportion across multiple bins](figs/fig_fulldata.png)
 
 So across our full data set, Birch clustering and DBSCAN work very well to pull out the main cluster in the data. This isn't too surprising when considering the initial findings from the test data, because although this second data set has a lot more MAGs to process (59, including the original) the general output pattern from the t-SNE algorithm is the same for each bin. Therefore, all the intrinsic assumptions about MAG contig density and clustering shapes are reasonably preserved across the full data set.
 
