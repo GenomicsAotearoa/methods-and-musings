@@ -1,10 +1,5 @@
 ## Clustering MAG contigs with sklearn
 
-**Dr David Waite**
-University of Auckland
-Genomics Aotearoa
-21/11/2019
-
 As part of refining metagenome-assembled genomes (MAGs), we typically go through a process of using a clustering algorithm like [t-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding). Identifying the 'correct' (or more likely, ideal) MAG boundaries by eye is usually quite easy but trying to automate the process can be problematic, and that's part of what I'm trying to do as part of out pipeline development. One of the biggest difficulties with cluster analysis is that there are so many different methods out there and they all have various strengths and weaknesses. Some of the most common algorithms used in biology include [*k*-means clustering](https://en.wikipedia.org/wiki/K-means_clustering) and variants on [hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering). *K*-means clustering in particular suffers from the following assumptions of the data they process:
 
 1. All data points belong in a cluster.
