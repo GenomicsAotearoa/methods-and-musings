@@ -27,7 +27,7 @@ plt.scatter(df.V1, df.V2)
 plt.savefig('figs/fig_base.png', bbox_inches='tight')
 ```
 
-![The basic data set](https://github.com/GenomicsAotearoa/methods-and-musings/bin-cluster-refinement/figs/fig_base.png)
+![The basic data set](https://github.com/GenomicsAotearoa/methods-and-musings/tree/master/bin-cluster-refinement/figs/fig_base.png)
 
 From here, it is pretty clear that there is really one large/consistent cluster of contig points, and a number of outliers and smaller clusters. What I want to do here is find an approach that can produce a cluster containing only the main contig points. Lets see what happens if we plot a few different values.
 
@@ -62,7 +62,7 @@ for r, c in product([0, 1], [0, 1, 2, 3]):
 plt.savefig('figs/fig_kmeans.png', bbox_inches='tight')
 ```
 
-![Data set with k-means clustering](https://github.com/GenomicsAotearoa/methods-and-musings/bin-cluster-refinement/figs/fig_kmeans.png)
+![Data set with k-means clustering](https://github.com/GenomicsAotearoa/methods-and-musings/tree/master/bin-cluster-refinement/figs/fig_kmeans.png)
 
 As you can see here, as *k* steps from 2 to 3 we appear to be narrowing in on the correct location. However, once we step to *k* = 4, the major cluster is broken up while **still** including an 'outlier' contig in one of these clusters. How does it look with hierarchical clustering? For the sake of keeping this exercise simple, I will only use Euclidean distances. However, there are fours ways this clustering technique can be employed in *sklearn*:
 
@@ -117,7 +117,7 @@ for i in range(0, len(sl_clust)):
 plt.savefig('figs/fig_hclust.png', bbox_inches='tight')
 ```
 
-![Data set with k-means clustering](https://github.com/GenomicsAotearoa/methods-and-musings/bin-cluster-refinement/figs/fig_hclust.png)
+![Data set with k-means clustering](https://github.com/GenomicsAotearoa/methods-and-musings/tree/master/bin-cluster-refinement/figs/fig_hclust.png)
 
 As you can see, there are a few permutations of linkage method and number of clusters that correctly bins the cluster of interest. For example
 
@@ -154,7 +154,7 @@ plt.scatter(df.V1, df.V2, c=sc_clust)
 plt.savefig('figs/fig_spectral.png', bbox_inches='tight')
 ```
 
-![Data set with spectral clustering](https://github.com/GenomicsAotearoa/methods-and-musings/bin-cluster-refinement/figs/fig_spectral.png)
+![Data set with spectral clustering](https://github.com/GenomicsAotearoa/methods-and-musings/tree/master/bin-cluster-refinement/figs/fig_spectral.png)
 
 That's not helpful...
 
@@ -185,7 +185,7 @@ ax[1].scatter(df.V1, df.V2, c=ap_clust_85); ax[1].set_title('Damping = 0.85')
 plt.savefig('figs/fig_affprop.png', bbox_inches='tight')
 ```
 
-![Data set with affinity propagation](https://github.com/GenomicsAotearoa/methods-and-musings/bin-cluster-refinement/figs/fig_affprop.png)
+![Data set with affinity propagation](https://github.com/GenomicsAotearoa/methods-and-musings/tree/master/bin-cluster-refinement/figs/fig_affprop.png)
 
 That looks terrible at the default value, although the clustering does resolve nicely with a damping factor of 0.85. This could be problematic though as we already stated that having to iterate over the parameter space is not desireable. Out of interest, how does the number of clusters vary with the *damping factor*?
 
@@ -204,7 +204,7 @@ plt.scatter([ i for i in range(0, len(n_clusters)) ], n_clusters)
 plt.savefig('figs/fig_affprop_clusters.png', bbox_inches='tight')
 ```
 
-![Number of clusters determined by differing damping factors](https://github.com/GenomicsAotearoa/methods-and-musings/bin-cluster-refinement/figs/fig_affprop_clusters.png)
+![Number of clusters determined by differing damping factors](https://github.com/GenomicsAotearoa/methods-and-musings/tree/master/bin-cluster-refinement/figs/fig_affprop_clusters.png)
 
 That collapse is pretty convincing, so for the sake of argument we'll call the ideal result affinity propagation 4 clusters.
 
@@ -236,7 +236,7 @@ ax[1].scatter(df.V1, df.V2, c=[ db_colours[d] for d in db_clust ]); ax[1].set_ti
 plt.savefig('figs/fig_dbscan.png', bbox_inches='tight')
 ```
 
-![Data set with Birch clustering and DBSCAN](https://github.com/GenomicsAotearoa/methods-and-musings/bin-cluster-refinement/figs/fig_dbscan.png)
+![Data set with Birch clustering and DBSCAN](https://github.com/GenomicsAotearoa/methods-and-musings/tree/master/bin-cluster-refinement/figs/fig_dbscan.png)
 
 Birch cluster looks comparable to affinity propagation with a high damping factor, DBSCAN seems to have identified the major clade of clusters whiel only discarding a few edge cases.
 
@@ -299,7 +299,7 @@ ax.set_xticklabels(['', 'AffProp (0.5)', 'AffProp (0.85)', 'Birch', 'DBSCAN'])
 plt.savefig('figs/fig_fulldata.png', bbox_inches='tight')
 ```
 
-![Bin cluster proportion across multiple bins](figs/fig_fulldata.png)
+![Bin cluster proportion across multiple bins](https://github.com/GenomicsAotearoa/methods-and-musings/tree/master/bin-cluster-refinement/figs/fig_fulldata.png)
 
 So across our full data set, Birch clustering and DBSCAN work very well to pull out the main cluster in the data. This isn't too surprising when considering the initial findings from the test data, because although this second data set has a lot more MAGs to process (59, including the original) the general output pattern from the t-SNE algorithm is the same for each bin. Therefore, all the intrinsic assumptions about MAG contig density and clustering shapes are reasonably preserved across the full data set.
 
