@@ -4,9 +4,9 @@ A (growing) collection of information contributed by Genomics Aotearoa members.
 
 ----
 
-## Troubleshooting 
+## Troubleshooting and Tips
 
-See the [Troubleshooting Guide](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/TroubleshootingGuide.md) for handy tips, tricks and tutotials.
+See the [Troubleshooting Guide](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/TroubleshootingGuide.md) for handy tips, tricks and tutotials. Our [Scripting and Programming Tips](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/ScriptingAndProgrammingTips.md) page has useful information to help with scripting and coding.
 
 ----
 
