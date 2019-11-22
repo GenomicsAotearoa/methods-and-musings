@@ -16,9 +16,9 @@ ESR has been performing benchmarking experiments with GPU base calling of Oxford
 
 [GPU basecalling benchmarks](https://esr-nz.github.io/gpu_basecalling_testing/gpu_benchmarking.html)
 
-**Dr Miles Benton**  
-ESR (Institute of Environmental Science NZ)  
-14/05/2019  
+**Dr Miles Benton**<br>
+ESR (Institute of Environmental Science NZ)<br>
+14/05/2019
 
 ----
 
@@ -28,8 +28,8 @@ Dr Ann McCartney, a Genomics Aotearoa funded researcher at Manaaki Whenua Landca
 
 [Re-base-calling my Oxford Nanopore data?](nanopore-basecalling/nanopore-basecalling.md)
 
-**Dr Ann McCartney**
-Manaaki Whenua / Landcare Research
+**Dr Ann McCartney**<br>
+Manaaki Whenua / Landcare Research<br>
 26/09/2019
 
 ---
@@ -40,8 +40,8 @@ ESR has been performing benchmarking experiments with GPU base calling of Oxford
 
 [Bin cluster refinement](bin-cluster-refinement/clustering-with-sklearn.md)
 
-**Dr David Waite**
-University of Auckland
+**Dr David Waite**<br>
+University of Auckland<br>
 22/11/2019  
 
 ----
