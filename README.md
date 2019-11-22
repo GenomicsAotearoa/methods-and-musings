@@ -36,7 +36,7 @@ Manaaki Whenua / Landcare Research<br>
 
 ### Testing out clustering algorithms for MAG refinement
 
-ESR has been performing benchmarking experiments with GPU base calling of Oxford Nanopore data. The below documentation outlines the current results.
+Some musings as I go through a number of different clustering algorithms in the python sklearn library.
 
 [Bin cluster refinement](bin-cluster-refinement/clustering-with-sklearn.md)
 
