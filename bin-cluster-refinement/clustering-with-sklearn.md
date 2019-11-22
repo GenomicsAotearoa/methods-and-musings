@@ -10,7 +10,6 @@ As part of refining metagenome-assembled genomes (MAGs), we typically go through
 1. All data points belong in a cluster.
 1. Clusters are approximately even in size.
 1. The user needs to specify the ideal number of clusters.
-1. Depend on a distance matrix of points to be computed, and are sensitive to which distance measure is calculated.
 
 While there are a number of techniques for identifying the ideal number of clusters that exist in a data set they can also be a bit subjective in how you interpret them. In the wider world of Data Science, there are a number of more advanced clustering techniques which can be found described [here](https://scikit-learn.org/stable/modules/clustering.html). Depending on what metric you use, clustering algorithms are prone to over- or under-clustering data compard to what we can clearly see in the ordination space. This is a quick walk-through testing some of clustering algorithms I have been experimenting with as part of the [Environmental Metagenomics](https://www.genomics-aotearoa.org.nz/projects/environmental-metagenomics) program under Genomics Aoteoroa.
 
