@@ -68,22 +68,19 @@ As you can see here, as *k* steps from 2 to 3 we appear to be narrowing in on th
 ```python
 from sklearn.cluster import AgglomerativeClustering
 
-sl_clust = []
-al_clust = []
-cl_clust = []
-w_clust = []
+def yield_clusters(df, min_n, max_n, link):
+    for i in range(min_n, max_n):
+        yield AgglomerativeClustering(n_clusters=i, linkage=link, affinity='euclidean').fit_predict(df)
 
-for i in range(2, 10):
-    sl_clust.append( AgglomerativeClustering(n_clusters=i, linkage='single', affinity='euclidean').fit_predict(df) )
-    al_clust.append( AgglomerativeClustering(n_clusters=i, linkage='average', affinity='euclidean').fit_predict(df) )
-    cl_clust.append( AgglomerativeClustering(n_clusters=i, linkage='complete', affinity='euclidean').fit_predict(df) )
-    w_clust.append( AgglomerativeClustering(n_clusters=i, linkage='ward', affinity='euclidean').fit_predict(df) )
+sl_clust = [ c for c in yield_clusters(df, 2, 10, 'single') ]
+al_clust = [ c for c in yield_clusters(df, 2, 10, 'average') ]
+cl_clust = [ c for c in yield_clusters(df, 2, 10, 'complete') ]
+w_clust = [ c for c in yield_clusters(df, 2, 10, 'ward') ]
 ```
 
 Now let's plot this out. This is going to get a bit messy, so I'm going to define a simple [generator](https://wiki.python.org/moin/Generators) to simplify the the code.
 
 ```python
-
 def get_plot_values():
     row_index = [ x for x in range(0, 4) ]
     method_names = ['Single', 'Average', 'Complete', 'Ward']
@@ -96,15 +93,11 @@ fig.set_size_inches(15, 10)
 
 # Plot the data
 for row, method, cluster_list in get_plot_values():
+    ax[row,0].set_ylabel( method )
     for col, clust in enumerate(cluster_list):
         ax[row, col].scatter(df.V1, df.V2, c=clust)
 
-# Label the axes
-ax[0,0].set_ylabel('Single')
-ax[1,0].set_ylabel('Average')
-ax[2,0].set_ylabel('Complete')
-ax[3,0].set_ylabel('Ward')
-
+# Set column names for the top row
 for i in range(0, len(sl_clust)):
     ax[0, i].set_title( 'k = {}'.format( i + 2 ) )
 
@@ -121,7 +114,7 @@ As you can see, there are a few permutations of linkage method and number of clu
 1. Complete linkage k = 6
 1. Complete linkage k = 7
 
-But this is not a very good way of finding that out. In addition, I would need to check out every sample in advance to work out the correct permutation to use. In the Waiwera data set that we use in the Environmental Metagenomics program, we have a total of 660 MAGs, and there are 24 permutations considered here. That's not practical. We're therefore going to look at the default behaviours of several more advanced clustering algorithms and see if there are any that can correctly cluster the 'main' group of contigs without exhaustively working through the parameter space.
+But this is not a very good way of finding that out as I would need to check out every sample in advance to work out the correct permutation to use. In the Waiwera data set that we use in the Environmental Metagenomics program, we have a total of 660 MAGs and there are 24 permutations considered here. That means a total of 15,840 possible clustering plots I would need to inspect, which is not practical. We're therefore going to look at the default behaviours of several more advanced clustering algorithms and see if there are any that can correctly cluster the 'main' group of contigs without exhaustively working through the parameter space.
 
 ### Clustering with Spectral Clustering
 
@@ -140,7 +133,7 @@ Counter(sc_clust)
 # Counter({3: 130, 4: 110, 1: 102, 0: 28, 6: 5, 2: 4})
 ```
 
-That distribution looks strange - most of the contigs fall into two different bins. What does this look like?
+That distribution looks strange - most of the contigs fall into three different bins. What does this look like?
 
 ```python
 plt.clf()
@@ -245,10 +238,10 @@ def find_clade_proportion(cluster_list):
     total = len( cluster_list )
     return most_freq / float(total)
 
-name_list = ['Spectral Clustering', 'Affinity Propagation (50)', 'Affinity Propagation (85)', 'Birch', 'DBSCAN']
-clust_list = [sc_clust, ap_clust_50, ap_clust_85, bi_clust, db_clust]
+names = ['Spectral Clustering', 'Affinity Propagation (50)', 'Affinity Propagation (85)', 'Birch', 'DBSCAN']
+clusters = [sc_clust, ap_clust_50, ap_clust_85, bi_clust, db_clust]
 
-for name, clust in zip(name_list, clust_list):
+for name, clust in zip(names, clusters):
     clust_pc = find_clade_proportion(clust)
     print( '{}: {:.0%}'.format(name, clust_pc) )
 ```
@@ -285,7 +278,7 @@ plt.clf()
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-_ = ax.violinplot([affprop_spread, affprop85_spread, birch_spread, dbscan_spread], showmeans=False, showmedians=True)
+_ = ax.violinplot([affprop_spread, affprop85_spread, birch_spread, dbscan_spread], showmedians=True)
 
 ax.set_xticks([0, 1, 2, 3, 4])
 ax.set_xticklabels(['', 'AffProp (0.5)', 'AffProp (0.85)', 'Birch', 'DBSCAN'])
