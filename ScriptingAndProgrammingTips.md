@@ -18,6 +18,21 @@ Tools for working with Git repositories.
 #### [vscode-gist](https://github.com/kenhowardpdx/vscode-gist) (Language Agnostic)
 Integrated tools for supporting and working with gists (short GitHub code snippets).
 
+#### [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set. See [here](https://code.visualstudio.com/docs/remote/remote-overview) for detailed overview and setup.
+
+#### [markdown-all-in-on](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+Everything you need to work with Markdown in VScode.
+
+#### [vscode-pandoc](https://marketplace.visualstudio.com/items?itemName=DougFinke.vscode-pandoc)
+Renders Markdown via Pandoc. Allows you to render Markdown out to html, pdf and even docx.
+
+#### [vscode-spotify](https://marketplace.visualstudio.com/items?itemName=shyykoserhiy.vscode-spotify)
+Control Spotify within VScode, no need to leave your IDE anymore!
+
+#### [code-settings-sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+Synchronize Settings, Snippets, Themes, File Icons, Launch, Keybindings, Workspaces and Extensions Across Multiple Machines Using GitHub Gist.
+
 #### Language Extensions
 vscode has extensions for pretty much every programming language and will often suggest installation of them when you begin editing those types of files. There are often multiple extensions for a single language, so it may be worth identifying the one you most prefer before installing a suggested one. Number of downloads, ratings, and recent updates are good metrics when deciding a specific extension.
 
