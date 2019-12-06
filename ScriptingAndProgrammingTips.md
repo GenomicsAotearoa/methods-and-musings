@@ -33,6 +33,9 @@ Control Spotify within VScode, no need to leave your IDE anymore!
 #### [code-settings-sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
 Synchronize Settings, Snippets, Themes, File Icons, Launch, Keybindings, Workspaces and Extensions Across Multiple Machines Using GitHub Gist.
 
+#### [bracket-pair-colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+A great way to keep track of your brackets.
+
 #### Language Extensions
 vscode has extensions for pretty much every programming language and will often suggest installation of them when you begin editing those types of files. There are often multiple extensions for a single language, so it may be worth identifying the one you most prefer before installing a suggested one. Number of downloads, ratings, and recent updates are good metrics when deciding a specific extension.
 
