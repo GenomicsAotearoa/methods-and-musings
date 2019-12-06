@@ -10,3 +10,5 @@
 [Guide to using GitHub](https://guides.github.com/activities/hello-world/)
 
 [Learn about Gists](https://help.github.com/en/github/writing-on-github/creating-gists)
+
+[Creating a pull request from a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
