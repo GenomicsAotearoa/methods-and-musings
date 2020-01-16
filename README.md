@@ -45,3 +45,13 @@ University of Auckland<br>
 22/11/2019  
 
 ----
+
+### Jetson Xavier GPU benchmarking (nanopore basecalling)
+
+A growing collection of notes and benchmarking nanopore basecalling on the Jetson Xavier.
+
+[Xavier basecalling benchmarks](https://gist.github.com/sirselim/2ebe2807112fae93809aa18f096dbb94)
+
+**Dr Miles Benton**<br>
+ESR (Institute of Environmental Science NZ)<br>
+16/01/2020
