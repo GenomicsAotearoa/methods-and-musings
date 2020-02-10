@@ -29,8 +29,9 @@ However, across all of these there was not a lot of consistency in methods, or r
 
 1. [Experimental information](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/metagenomic_ont/1_experimental_setup.md)
 1. [Approach one - assembly of uncorrected reads](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/metagenomic_ont/2_uncorrected_assembly.md)
-1. [Approach two - error correction and assembly]()
-1. [Read mapping - two strategies]()
-1. [Evaluation of MAGs]()
+1. [Approach two - error correction and assembly](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/metagenomic_ont/3_error_correction.md)
+1. [Read mapping](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/metagenomic_ont/4_read_mapping.md)
+1. [Binning and dereplication](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/metagenomic_ont/5_binning.md)
+1. [Comparison and evaluation of MAGs](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/metagenomic_ont/6_evaluation.md)
 
 ---
