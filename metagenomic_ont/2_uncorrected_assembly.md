@@ -93,4 +93,4 @@ done
 
 ----
 
-Next up - [Assembly (part 2)]().
+Next up - [Assembly (part 2)](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/metagenomic_ont/3_error_correction.md).
