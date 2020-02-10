@@ -12,4 +12,4 @@ From three of these sites, we were able to extract sufficient high molecular wei
 
 ----
 
-Next up - [Assembly (part 1)]().
+Next up - [Assembly (part 1)](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/metagenomic_ont/2_uncorrected_assembly.md).
