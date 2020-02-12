@@ -55,3 +55,15 @@ A growing collection of notes and benchmarking nanopore basecalling on the Jetso
 **Dr Miles Benton**<br>
 ESR (Institute of Environmental Science NZ)<br>
 16/01/2020
+
+----
+
+### Comparison of long-read assemblers for metagenomic bin recovery
+
+A test run of different combinations of assemblers, read mapping, and binning tools for determining the best recovery of MAGs from estuarine sediment metagenomes.
+
+[Metagenomic assembly and binning with ONT](https://github.com/GenomicsAotearoa/methods-and-musings/tree/master/metagenomic_ont)
+
+**Dr David Waite**<br>
+University of Auckland<br>
+12/02/2020
