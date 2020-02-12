@@ -19,9 +19,9 @@ I used the workflow suggested on the `FMLRC` (v1.0.0), except rather than use `s
 ```bash
 for i in S4R3 S5R2 S6R1;
 do
-    gunzip -c ${i}_R1.fastq.gz | awk 'NR % 4 == 2' > S4R3.txt
-    gunzip -c ${i}_R2.fastq.gz | awk 'NR % 4 == 2' >> S4R3.txt
-    gunzip -c ${i}_single.fastq.gz | awk 'NR % 4 == 2' >> S4R3.txt
+    gunzip -c ${i}_R1.fastq.gz | awk 'NR % 4 == 2' > ${i}.txt
+    gunzip -c ${i}_R2.fastq.gz | awk 'NR % 4 == 2' >> ${i}.txt
+    gunzip -c ${i}_single.fastq.gz | awk 'NR % 4 == 2' >> ${i}.txt
 done
 ```
 
@@ -60,7 +60,7 @@ Total time to process:
 1. S5R2: 2 h 12 min
 1. S6R1: 57 min
 
-Which is hardly a problem. I wouldn't even consider five an a half hours a meaningful delay in this analysis.
+Which is hardly a problem. I wouldn't even consider five and a half hours to be a meaningful delay in this analysis.
 
 ----
 
