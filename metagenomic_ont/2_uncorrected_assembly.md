@@ -36,7 +36,7 @@ for i in {1..3};
 do
     flye --threads 20 --genome-size ${SIZES[$i]} \
          --nano-raw ${SAMPLES[$i]}.nanofilt.fastq.gz \
-         --out-dir ${SAMPLES[$i]}_metaflye_retuned/
+         --out-dir ${SAMPLES[$i]}_flye/
 done
 ```
 
