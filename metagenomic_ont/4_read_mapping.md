@@ -91,7 +91,7 @@ do
         bowtie2-build --threads 30 NoCorr_${i}_${asm}.m5000.prok.fna NoCorr_${i}_${asm}.m5000
 
         SAMPLE=$(echo ${i} | cut --characters=1-2)
-        for rep in S1 S2 S3;
+        for REP in S1 S2 S3;
         do
             bowtie2 --sensitive --threads 30 --minins 0 --maxins 900 -x NoCorr_${i}_${asm}.m5000 \
                     -1 ${SAMPLE}${REP}_R1.fastq.gz -2 ${SAMPLE}${REP}_R2.fastq.gz \
@@ -103,7 +103,7 @@ do
         bowtie2-build --threads 30 FMLRC_${i}_${asm}.m5000.prok.fna FMLRC_${i}_${asm}.m5000
 
         SAMPLE=$(echo ${i} | cut --characters=1-2)
-        for rep in S1 S2 S3;
+        for REP in S1 S2 S3;
         do
             bowtie2 --sensitive --threads 30 --minins 0 --maxins 900 -x FMLRC_${i}_${asm}.m5000 \
                     -1 ${SAMPLE}${REP}_R1.fastq.gz -2 ${SAMPLE}${REP}_R2.fastq.gz \
