@@ -17,7 +17,7 @@ For the following command examples, I have taken the assemblies from each tool a
 [Correction]_[Sample]_[Assembly tool].fna
 ```
 
-So that they are easier to handle in `bash` loops. Before mapping, I will use `seqmagick` to remove some short contigs (defined here as under 5 kbp) in order to remove some shrapnel from the binning process.
+So that they are easier to handle in `bash` loops. Before mapping, I will use `seqmagick` to filter out short contigs (defined here as under 5 kbp) in order to remove some shrapnel from the binning process.
 
 ```bash
 for i in S4R3 S5R2 S6R1;
@@ -30,7 +30,7 @@ do
 done
 ```
 
-This is not a standard part of most workflows, but I have found that using a tool like `EukRep` to split apart the prokaryotic and eukaryotic reads before binning. In my experience (admittedly, anecdotal) this yields a greater number bins, and a higher average quality of bin than binning with all the reads together.
+This is not a standard part of most workflows, but I use a tool like `EukRep` to split apart the prokaryotic and eukaryotic reads before binning. In my experience (admittedly, anecdotal) this yields a greater number bins, and a higher average quality of bin than binning with all the reads together.
 
 ```bash
 for i in S4R3 S5R2 S6R1;
@@ -54,9 +54,9 @@ done
 
 A recent manuscript by [Sevin *et al.* (2019)](https://doi.org/10.6084/m9.figshare.10260740) used `bwa` with the `-x ont2d` parameter for mapping, which is what I will use here. Apply the steps:
 
-1. Index with `bwa` v0.7.17
+1. Index with `bwa` (v0.7.17)
 1. Map with `bwa mem`
-1. Sort and compress the *sam* file with `samtools` v1.8
+1. Sort and compress the *sam* file with `samtools` (v1.8)
 
 ```bash
 for i in S4R3 S5R2 S6R1;
@@ -91,7 +91,7 @@ do
         bowtie2-build --threads 30 NoCorr_${i}_${asm}.m5000.prok.fna NoCorr_${i}_${asm}.m5000
 
         SAMPLE=$(echo ${i} | cut --characters=1-2)
-        for REP in S1 S2 S3;
+        for REP in R1 R2 R3;
         do
             bowtie2 --sensitive --threads 30 --minins 0 --maxins 900 -x NoCorr_${i}_${asm}.m5000 \
                     -1 ${SAMPLE}${REP}_R1.fastq.gz -2 ${SAMPLE}${REP}_R2.fastq.gz \
