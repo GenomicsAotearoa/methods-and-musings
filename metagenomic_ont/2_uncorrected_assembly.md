@@ -15,9 +15,7 @@ do
 done
 ```
 
-This yielded assemblies of 79 Mbp - 184 Mbp, which I then used to manually set the genome size for `metaFlye` as suggested [here](https://github.com/fenderglass/Flye/blob/flye/docs/FAQ.md). These values were also used for `Flte`.
-
-#### metaFlye v2.4.2
+This yielded assemblies of 79 Mbp - 184 Mbp, which I then used to manually set the genome size for `metaFlye` as suggested [here](https://github.com/fenderglass/Flye/blob/flye/docs/FAQ.md). These values were also used for `Flye`.
 
 ```bash
 SAMPLES=(S4R3 S5R2 S6R1)
