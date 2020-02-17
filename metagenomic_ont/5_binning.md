@@ -13,7 +13,7 @@ Given how bulky this code gets, I am only providing snippets for the uncorrected
 ```bash
 for i in S4R3 S5R2 S6R1;
 do
-    for asm in flye metaflye metaflye_retuned miniasm canu shasta hybridspades;
+    for asm in flye metaflye metaflye_retuned miniasm canu shasta;
     do
         jgi_summarize_bam_contig_depths --outputDepth NoCorr_${i}_${asm}.metabat.txt NoCorr_${i}_${asm}.m5000.bam
         metabat2 -t 10 -s 50000 -a NoCorr_${i}_${asm}.metabat.txt \
@@ -30,7 +30,7 @@ For `MaxBin`, we will just recycle the coverage table from `MetaBAT`.
 ```bash
 for i in S4R3 S5R2 S6R1;
 do
-    for asm in flye metaflye metaflye_retuned miniasm canu shasta hybridspades;
+    for asm in flye metaflye metaflye_retuned miniasm canu shasta;
     do
         cut -f1,4 NoCorr_${i}_${asm}.metabat.txt > NoCorr_${i}_${asm}.maxbin.txt
         mkdir NoCorr_${i}_${asm}.maxbin_ont/
@@ -48,7 +48,7 @@ The `CONCOCT` pipeline requires us to chop up our contigs into shorter sub-conti
 ```bash
 for i in S4R3 S5R2 S6R1;
 do
-    for asm in flye metaflye metaflye_retuned miniasm canu shasta hybridspades;
+    for asm in flye metaflye metaflye_retuned miniasm canu shasta;
     do
         samtools index NoCorr_${i}_${asm}.m5000.bam
         cut_up_fasta.py -c 10000 -o 0 --merge_last -b NoCorr_${i}_${asm}.m5000.prok.10k.bed \
@@ -65,7 +65,7 @@ Now perform the binning protocol...
 ```bash
 for i in S4R3 S5R2 S6R1;
 do
-    for asm in flye metaflye metaflye_retuned miniasm canu shasta hybridspades;
+    for asm in flye metaflye metaflye_retuned miniasm canu shasta;
     do
         concoct -t 10 --composition_file NoCorr_${i}_${asm}.m5000.prok.10k.fna \
                       --coverage_file NoCorr_${i}_${asm}.concoct.txt \
@@ -101,7 +101,7 @@ This is very similar ot the above examples, but this timne we have three samples
 for i in S4R3 S5R2 S6R1;
 do
     SAMPLE=$(echo ${i} | cut --characters=1-2)
-    for asm in flye metaflye metaflye_retuned miniasm canu shasta hybridspades;
+    for asm in flye metaflye metaflye_retuned miniasm canu shasta;
     do
         jgi_summarize_bam_contig_depths --outputDepth NoCorr_${i}_${asm}.metabat_hiseq.txt \
                                         NoCorr_${SAMPLE}R1_${asm}.m5000.bam \
@@ -121,7 +121,7 @@ This time I need to `cut` four olumns from the `MetaBAT` table - the contig name
 ```bash
 for i in S4R3 S5R2 S6R1;
 do
-    for asm in flye metaflye metaflye_retuned miniasm canu shasta hybridspades;
+    for asm in flye metaflye metaflye_retuned miniasm canu shasta;
     do
         cut -f1,4,6,8 NoCorr_${i}_${asm}.metabat_hiseq.txt > NoCorr_${i}_${asm}.maxbin_hiseq.txt
         mkdir NoCorr_${i}_${asm}.maxbin_hiseq/
@@ -140,7 +140,7 @@ Step 1 - creating the coverage profiles across the 10 kbp contig fragments.
 for i in S4R3 S5R2 S6R1;
 do
     SAMPLE=$(echo ${i} | cut --characters=1-2)
-    for asm in flye metaflye metaflye_retuned miniasm canu shasta hybridspades;
+    for asm in flye metaflye metaflye_retuned miniasm canu shasta;
     do
         samtools index NoCorr_${SAMPLE}R1_${asm}.m5000.bam
         samtools index NoCorr_${SAMPLE}R2_${asm}.m5000.bam
@@ -163,7 +163,7 @@ Step 2 - binning and reconstruction.
 ```bash
 for i in S4R3 S5R2 S6R1;
 do
-    for asm in flye metaflye metaflye_retuned miniasm canu shasta hybridspades;
+    for asm in flye metaflye metaflye_retuned miniasm canu shasta;
     do
         concoct -t 10 --composition_file NoCorr_${i}_${asm}.m5000.prok.10k.fna \
                       --coverage_file NoCorr_${i}_${asm}.concoct_hiseq.txt \
@@ -184,6 +184,80 @@ do
         done
     done
 done
+```
+
+----
+
+#### Bin dereplication and evaluation
+
+Since each sample/assembly has been binned with three different tools, it is now time to dereplicate the redundant MAGs using `DAS_Tool`, then for each remaining MAG;
+
+1. Evaluate the completeness and contamination statistics
+1. Assign taxonomy to the MAGs, where possible
+
+This will just be done on a single data set (`MetaFlye` assembly, uncorrected, with Illumina mapping) for the sake of keeping this document succinct.
+
+####  DAS_Tool v1.1.1
+
+Before running the tool, I need to create the input files for `DAS_Tool`. This tool does not actually use the MAGs *per se*, but rather a table of the contig/MAG assignments for each binning tool.
+
+```bash
+for i in S4R3 S5R2 S6R1;
+do
+    # Create the MetaBAT table
+    for fna_file in NoCorr_${i}_metaflye.metabat_hiseq/*fa;
+    do
+        target=$(basename ${fna_file} .fa)
+        grep ">" ${fna_file} | sed 's/>//g' | sed "s/$/\t${target}/g" >> metabat_associations.txt
+    done
+
+    # Create the MaxBin table
+    for fna_file in NoCorr_${i}_metaflye.maxbin_hiseq/*fasta;
+    do
+        target=$(basename ${fna_file} .fasta)
+        grep ">" ${fna_file} | sed 's/>//g' | sed "s/$/\t${target}/g" >> maxbin_associations.txt
+    done
+
+    # Create the CONCOCT table
+    for fna_file in NoCorr_${i}_${asm}.concoct_hiseq/*fasta;
+    do
+        target=$(basename ${fna_file} .fasta)
+        grep ">" ${fna_file} | sed 's/>//g' | sed "s/$/\t${target}/g" >> concoct_associations.txt
+    done
+done
+```
+
+With these tables created, it is now simple to run `DAS_Tool`...
+
+```bash
+for i in S4R3 S5R2 S6R1;
+do
+    DAS_Tool -i metabat_associations.txt,maxbin_associations.txt,concoct_associations.txt \
+             -l MetaBAT,MaxBin,CONCCOT \
+             -t 2 --write_bins 1 --search_engine blast \
+             -c NoCorr_${i}_metaflye.m5000.prok.fna \
+             -o NoCorr_${i}_metaflye.dastool/
+done
+```
+
+#### CheckM v1.0.13 and GTDB-TK v0.2.2 (r89 database)
+
+From the output of `DAS_Tool`, we can now run both `CheckM` (for MAG quality estimators) and `GTDB-TK` (for taxonomic classification). Both of these tools expect a folder of *fasta* files as the input, so the commands arequite simple to execute, although we nust make sure to correctly set the expected *fasta* extension with the `-x` parameter.
+
+```bash
+for i in S4R3 S5R2 S6R1;
+do
+    checkm lineage_wf -t 20 --pplacer_threads 20 -x fa \
+                      --tab_table -f NoCorr_${i}_metaflye.txt \
+                       NoCorr_${i}_metaflye.dastool/_DASTool_bins/ NoCorr_${i}_metaflye.checkm/
+
+    gtdbtk classify_wf -x fa --cpus 30 \
+                       --genome_dir NoCorr_${i}_metaflye.dastool/_DASTool_bins/ \
+                       --out_dir NoCorr_${i}_metaflye.gtdbtk/
+done
+
+
+
 ```
 
 ----
