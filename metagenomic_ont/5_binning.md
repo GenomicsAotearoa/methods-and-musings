@@ -255,9 +255,6 @@ do
                        --genome_dir NoCorr_${i}_metaflye.dastool/_DASTool_bins/ \
                        --out_dir NoCorr_${i}_metaflye.gtdbtk/
 done
-
-
-
 ```
 
 ----
