@@ -123,6 +123,10 @@ For clarity, I have left zeros as empty columns. Where no bins were recovered fo
 	<tr><th></th><th></th><th>S6R1</th><th>10</th><th>6</th><th></th><th>15</th><th>8</th><th></th></tr>
 </table>
 
+Or a bit more simply - 
+
+![](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/metagenomic_ont/figures/binning_summary.png)
+
 So it's pretty clear at this level of analysis that `SPAdes` yields the most, and highest quality MAGs. However, `SPAdes` cannot assembly long-read data with Illumina sequences for error correcting, so the comparison is really only valid against the error-corrected results for binning pipelines. In the absence of Illumina data, `CANU` appeared to recover the highest number of medium-quality (or greater) MAGs.
 
 ----
