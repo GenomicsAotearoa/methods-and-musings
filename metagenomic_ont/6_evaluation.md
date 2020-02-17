@@ -123,7 +123,7 @@ For clarity, I have left zeros as empty columns. Where no bins were recovered fo
 	<tr><th></th><th></th><th>S6R1</th><th>10</th><th>6</th><th></th><th>15</th><th>8</th><th></th></tr>
 </table>
 
-Or a bit more simply - 
+Or a bit more simply, for the Illumina mapping:
 
 ![](https://github.com/GenomicsAotearoa/methods-and-musings/blob/master/metagenomic_ont/figures/binning_summary.png)
 
