@@ -1,6 +1,6 @@
 ### Approach two - error correction and assembly
 
-The most obvious issue with load-read sequencing at the moment is the comparatively high error rate of Nanopore and PacBio sequencing when compared with Illumina technology. To circumvent this, there are a number of tools for using high-quality, short sequences to correct the error-prone long sequences in order to improve assembly.
+The most obvious issue with long-read sequencing at the moment is the comparatively high error rate of Nanopore and PacBio sequencing when compared with Illumina technology. To circumvent this, there are a number of tools for using high-quality, short sequences to correct the error-prone long sequences in order to improve assembly.
 
 ----
 
