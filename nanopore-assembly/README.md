@@ -6,8 +6,8 @@ A space	for documenting	ideas, methods plus tips on nanopore read assembly
 Nanopore reads generated from Oxford Nanopore Technologies (ONT) are much longer than the reads produced by second-generation short-read technologies, therefore can improve the accuracy of genome assemblies by spanning the highly-repetitive segments that cause difficulty. Today's long-read technologies are more accurate and less expensive, making them the choice for the assembly of complex genomes. Nanopore sequencing has been largely applied to assemble high-quality genomes in GA, hense a review on methods/approaches for long read QC, assembler benchmarking as well as assembly quality evaluation is required. We also include ideas on parameter setting and tips for running programs in this folder for discussion. All are welcome to contribute. 
 
 ## Bioinformaticians
-**Dr. Chen Wu**
-Plant and Food Research
+**Dr. Chen Wu**<BR>
+Plant and Food Research<BR>
 Species: Bilberry and Gillenia
 
 ...
