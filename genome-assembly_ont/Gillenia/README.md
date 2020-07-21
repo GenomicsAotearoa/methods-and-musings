@@ -10,7 +10,7 @@ Gillenia is the extant, dry-fruit bearing genus of the putative ancestral lineag
 It extract kmer pairs from both assembly scaffolds/contigs and nanopore raw reads, and then scaffolding the two contigs when a kmer pair from reads matches a pair generated from the two scaffolds/contigs. Three parameters required for optimisation: kmer length, k (distance for moving to the next kmer pair) and d (distance between a kmer pair).
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/christinawu2008/methods-and-musings/blob/master/genome-assembly_ont/Gillenia/links_method.png">
+  <img width="600" height="500" src="https://github.com/christinawu2008/methods-and-musings/blob/master/genome-assembly_ont/Gillenia/links_method.png">
 </p>
 
 
@@ -50,7 +50,7 @@ A comparison among 10x Chromium, LINKS_i6 and SLR assembly is shown below (Scaff
 The sequence length distribution graph showed below also indicates the effectiveness of scaffolding for relatively short sequences. 
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/christinawu2008/methods-and-musings/blob/master/genome-assembly_ont/Gillenia/seq_len_dis.png">
+  <img width="600" height="500" src="https://github.com/christinawu2008/methods-and-musings/blob/master/genome-assembly_ont/Gillenia/seq_len_dis.png">
 </p>
 
 ## Tips for running LINKS (Rene Warren: rwarren@bcgsc.ca)
