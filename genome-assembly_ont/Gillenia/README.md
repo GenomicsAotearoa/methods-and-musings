@@ -2,7 +2,7 @@
 
 ## Background
 
-Gillenia genome size is around 330Mb and initial scaffolds were produced from 10x chromium reads.
+Gillenia genome size is around 330Mb and initial scaffolds were produced from 10x chromium reads using Supernova.
 Nanopore reads including MiNION and Promethon reads were then generated for improving scaffolds.
 Long reads (> 30 bases) were chosen for post-scaffolding using nanopore reads. 
 
@@ -10,7 +10,7 @@ Long reads (> 30 bases) were chosen for post-scaffolding using nanopore reads.
 
 * **[LINKS](https://github.com/bcgsc/LINKS)**: can be used to scaffold high-quality draft genome assemblies with any long sequences. It extract kmer pairs from both assembly scaffolds/contigs and nanopore raw reads, and then scaffolding the two contigs when a kmer pair from reads matches a pair generated from the two scaffolds/contigs. Three parameters required for optimisation: kmer length, k (distance for moving to the next kmer pair) and d (distance between a kmer pair). The d can be iteratively increased from each time of scaffolding the previously generated scaffolds.
 
-![LINKS method]()
+![LINKS method](https://github.com/christinawu2008/methods-and-musings/blob/master/genome-assembly_ont/Gillenia/links_method.png)
 
 * **[SLR](https://github.com/luojunwei/SLR)**: this is an alignment-based scaffolding tool using long reads.
 
@@ -48,7 +48,7 @@ All resulted scaffolds were then gapfilled using TGS-GapCloser with raw nanopore
 | BUSCO Total genes                            | 1375          | 1375                 | 1375           |
 
 * scaffold length distribution
-![LINKS & SLR]()
+![LINKS & SLR](https://github.com/christinawu2008/methods-and-musings/blob/master/genome-assembly_ont/Gillenia/seq_len_dis.png)
 
 ## tips for running LINKS
 

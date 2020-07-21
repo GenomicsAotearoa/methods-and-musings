@@ -1,10 +1,10 @@
-# Oxford Nanopore reads in the construction of genome assembly
+# Genome assembly using Nanopore reads
 
 ## Description
 Nanopore reads generated from Oxford Nanopore Technologies (ONT) are much longer than the reads produced by second-generation sequencing technologies, therefore can improve the accuracy of genome assemblies by spanning the highly-repetitive segments that cause difficulty. 
 Today's long-read technologies are more accurate and less expensive, making them the choice for the assembly of complex genomes. 
 Nanopore sequencing has been largely applied to assemble high-quality genomes in GA. 
-This space is for documenting experiences of using programs designed for nanopore reads, including ideas on parameter setting and tips for running programs. 
+This space is for documenting experiences of using programs designed for genome assembly using nanopore reads, including ideas on parameter setting and tips for running programs. 
 All are welcome to contribute. 
 
 ## Bioinformaticians
