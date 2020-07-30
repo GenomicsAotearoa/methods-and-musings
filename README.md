@@ -1,4 +1,4 @@
-[![Analytics](https://ga-beacon.appspot.com/UA-174131763-1/methods-and-musings/readme)](https://github.com/igrigorik/ga-beacon)
+[![Analytics](https://ga-beacon.appspot.com/UA-174131763-1/methods-and-musings/readme?pixel)](https://github.com/igrigorik/ga-beacon)
 
 # Methods and Musings
 
