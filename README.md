@@ -1,5 +1,7 @@
 [![Analytics](https://ga-beacon.appspot.com/UA-174131763-1/methods-and-musings/readme?pixel)](https://github.com/igrigorik/ga-beacon)
 
+[![Analytics](https://ga-beacon.appspot.com/UA-174131763-1/chromeskel_a/readme?pixel)](https://github.com/igrigorik/ga-beacon)
+
 # Methods and Musings
 
 A (growing) collection of information contributed by Genomics Aotearoa members.
