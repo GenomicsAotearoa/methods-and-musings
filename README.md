@@ -1,5 +1,4 @@
 [![HitCount](http://hits.dwyl.com/GenomicsAotearoa/methods-and-musings.svg)](http://hits.dwyl.com/GenomicsAotearoa/methods-and-musings)
-<img src="https://hitcounter.pythonanywhere.com/count/tag.svg" alt="Hits">
 
 # Methods and Musings
 
