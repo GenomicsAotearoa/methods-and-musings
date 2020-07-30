@@ -1,8 +1,4 @@
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FGenomicsAotearoa%2Fmethods-and-musings%2F)](https://hits.seeyoufarm.com)
-
-[![HitCount](http://hits.dwyl.com/GenomicsAotearoa/methods-and-musings.svg)](http://hits.dwyl.com/GenomicsAotearoa/methods-and-musings)
-
-![ViewCount](https://views.whatilearened.today/views/github/GenomicsAotearoa/methods-and-musings.svg)
+[![Analytics](https://ga-beacon.appspot.com/UA-174131763-1/methods-and-musings/readme)](https://github.com/igrigorik/ga-beacon)
 
 # Methods and Musings
 
