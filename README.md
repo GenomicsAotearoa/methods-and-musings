@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.com/GenomicsAotearoa/methods-and-musings.svg)](http://hits.dwyl.com/GenomicsAotearoa/methods-and-musings)
+
 # Methods and Musings
 
 A (growing) collection of information contributed by Genomics Aotearoa members.
