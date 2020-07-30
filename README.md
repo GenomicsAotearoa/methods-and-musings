@@ -1,5 +1,7 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FGenomicsAotearoa%2Fmethods-and-musings%2F)](https://hits.seeyoufarm.com)
 
+[![HitCount](http://hits.dwyl.com/GenomicsAotearoa/methods-and-musings.svg)](http://hits.dwyl.com/GenomicsAotearoa/methods-and-musings)
+
 # Methods and Musings
 
 A (growing) collection of information contributed by Genomics Aotearoa members.
