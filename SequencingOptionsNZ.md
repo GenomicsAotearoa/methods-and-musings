@@ -6,9 +6,15 @@
 
 ## Illumina/short-read options
 
+### Iseq
+ *  LIC 
+ *  Wilderlab
+
 ### MiSeq
 
-* Auckland Genomics
+* Auckland Genomics  
+* Sequench 
+* surely more...
   
 ### HiSeq
 
@@ -17,16 +23,28 @@
 ### MGIseq
 
 * Grafton Clinicial Genomics 
-* Chris Winefield's team run of these in Lincoln
+* Chris Winefield, Lincoln University
 
 ### Novaseq
 
 * AgResearch
-* LiC
-* Auckland Genomics
+* LIC
 
 ## Nanopore
 
-* Bragato
-* Auckland Genomics
-* 
+* Bragato Research Institute (PromethION 24)
+* Auckland Genomics (GridION and P2)
+* Otago Genomics
+* more ...
+
+
+### contact details 
+|Provider | Contact name| email address |
+|---|----|---|
+|Auckland Genomics| Dr Nikki Freed| genomics@auckland.ac.nz|
+|Otago Genomics| Dr Rob Day | genomics@otago.ac.nz | 
+|LIC | Dr Liam Williams | Dr Liam.Williams@lic.co.nz|
+|Grafton Clinical Genomics| Dr Jason Copedo | gcgenomics@auckland.ac.nz |  
+|Bragato Research Institute| Dr Annabel Whibley| sequencing@bri.co.nz|
+|Lincoln University | Dr Chris Winefield | christopher.winefield@lincoln.ac.nz|
+|AgResearch| Dr Tracey Van Stijn | tracey.vanstijn@agresearch.co.nz|
