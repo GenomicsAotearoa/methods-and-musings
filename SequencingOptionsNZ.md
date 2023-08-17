@@ -13,12 +13,18 @@
 ### MiSeq
 
 * Auckland Genomics  
+* Otago Genomics
 * Sequench 
 * surely more...
   
 ### HiSeq
 
-* Otago Genomics perhaps? *Nat has emailed to enquire what sequencing platforms are currently offered.*
+* No longer supported by Illumina
+
+### NextSeq
+
+* Auckland Genomics
+* Otago Genomics
 
 ### MGIseq
 
@@ -34,9 +40,8 @@
 
 * Bragato Research Institute (PromethION 24)
 * Auckland Genomics (GridION and P2)
-* Otago Genomics
+* Otago Genomics - GridION available to use, but not available as a service
 * more ...
-
 
 ### contact details 
 |Provider | Contact name| email address |
@@ -48,3 +53,4 @@
 |Bragato Research Institute| Dr Annabel Whibley| sequencing@bri.co.nz|
 |Lincoln University | Dr Chris Winefield | christopher.winefield@lincoln.ac.nz|
 |AgResearch| Dr Tracey Van Stijn | tracey.vanstijn@agresearch.co.nz|
+
