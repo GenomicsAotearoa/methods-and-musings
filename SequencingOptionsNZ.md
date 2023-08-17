@@ -9,10 +9,16 @@
 ### MiSeq
 
 * Auckland Genomics
+* Otago Genomics
   
 ### HiSeq
 
-* Otago Genomics perhaps? *Nat has emailed to enquire what sequencing platforms are currently offered.*
+* No longer supported by Illumina
+
+### NextSeq
+
+* Auckland Genomics
+* Otago Genomics
 
 ### MGIseq
 
@@ -29,4 +35,4 @@
 
 * Bragato
 * Auckland Genomics
-* 
+* Otago Genomics - GridION available to use, but not available as a service
